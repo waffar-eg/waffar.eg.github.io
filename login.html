@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول | وفّر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <header id="site-header"></header>
+
+  <main class="auth-page">
+    <div class="auth-side">
+      <h2>أهلاً بيك تاني 👋</h2>
+      <p>سجّل دخولك وكمّل تسوقك من منافذ مصر.</p>
+      <div class="auth-emojis">🛒🥬🍊🥩🍗🥛</div>
+    </div>
+
+    <div class="auth-card">
+      <h1>تسجيل الدخول</h1>
+      <p class="muted">للمشترين والمنافذ</p>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="l-email">الإيميل</label>
+          <input id="l-email" type="email" placeholder="name@example.com" dir="ltr" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="l-pass">الباسورد</label>
+          <div class="pass-wrap">
+            <input id="l-pass" type="password" placeholder="••••••" dir="ltr" autocomplete="current-password" required>
+            <button type="button" class="toggle-pass" aria-label="إظهار الباسورد">👁</button>
+          </div>
+        </div>
+        <p class="form-error" id="login-error"></p>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">دخول</button>
+        <p class="switch">معندكش حساب؟ <a href="register.html">اعمل حساب جديد</a></p>
+      </form>
+
+      <div class="demo-box">
+        <b>🧪 حسابات منافذ تجريبية (الباسورد: 123456)</b>
+        <button type="button" class="demo-fill" data-email="nasrcity@wafar.eg">منفذ مدينة نصر</button>
+        <button type="button" class="demo-fill" data-email="haram@wafar.eg">منفذ الهرم</button>
+        <button type="button" class="demo-fill" data-email="ismailia@wafar.eg">منفذ الإسماعيلية</button>
+        <button type="button" class="demo-fill" data-email="alex@wafar.eg">منفذ سيدي جابر</button>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

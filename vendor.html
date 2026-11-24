@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة المنفذ | وفّر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="vendor">
+  <header id="site-header"></header>
+
+  <section class="shop-banner vendor-banner">
+    <div class="container">
+      <div><h1>🏪 <span id="v-name"></span></h1><p id="v-loc"></p></div>
+      <span class="banner-emoji">📊</span>
+    </div>
+  </section>
+
+  <main class="container page">
+    <div class="stat-cards">
+      <div class="stat-card"><span>📦</span><div><b id="st-products">0</b><small>منتج معروض</small></div></div>
+      <div class="stat-card"><span>🧾</span><div><b id="st-orders">0</b><small>طلب</small></div></div>
+      <div class="stat-card"><span>💰</span><div><b id="st-revenue">0</b><small>المبيعات</small></div></div>
+      <div class="stat-card"><span>⚠️</span><div><b id="st-low">0</b><small>مخزون قليل</small></div></div>
+    </div>
+
+    <div class="card">
+      <h3 id="form-title">➕ أضف منتج جديد</h3>
+      <form id="product-form" class="product-form" novalidate>
+        <input type="hidden" id="p-id">
+        <div class="grid-3">
+          <div class="field"><label for="p-name">اسم المنتج</label><input id="p-name" type="text" placeholder="مثال: طماطم"></div>
+          <div class="field"><label for="p-cat">القسم</label><select id="p-cat"></select></div>
+          <div class="field"><label for="p-unit">الوحدة</label><input id="p-unit" type="text" placeholder="كيلو / لتر / كرتونة" list="units">
+            <datalist id="units"><option value="كيلو"><option value="نص كيلو"><option value="لتر"><option value="كرتونة 30"><option value="قطعة"><option value="كيس"></datalist></div>
+          <div class="field"><label for="p-price">السعر (ج.م)</label><input id="p-price" type="number" min="0" step="0.5" placeholder="0"></div>
+          <div class="field"><label for="p-old">السعر قبل الخصم (اختياري)</label><input id="p-old" type="number" min="0" step="0.5" placeholder="0"></div>
+          <div class="field"><label for="p-stock">الكمية المتاحة</label><input id="p-stock" type="number" min="0" placeholder="0"></div>
+        </div>
+        <div class="img-row">
+          <div class="field">
+            <label for="p-file">صورة المنتج (ارفع من جهازك)</label>
+            <input id="p-file" type="file" accept="image/*">
+            <label for="p-url" class="mt">أو حط لينك صورة</label>
+            <input id="p-url" type="url" placeholder="https://..." dir="ltr">
+          </div>
+          <div class="preview" id="p-preview"><span>🖼️ معاينة الصورة</span></div>
+        </div>
+        <div class="clearance-box">
+          <label class="check"><input type="checkbox" id="p-clear"> ⏰ ضيفه لعروض آخر اليوم (منتج متباعش أو قرب تنتهي صلاحيته)</label>
+          <div class="grid-2" id="clear-fields" hidden>
+            <div class="field"><label for="p-extra">الخصم الإضافي %</label><input id="p-extra" type="number" min="5" max="90" placeholder="مثال: 30"></div>
+            <div class="field"><label for="p-expiry">تاريخ انتهاء الصلاحية</label><input id="p-expiry" type="date"></div>
+          </div>
+        </div>
+        <div class="form-btns">
+          <button type="submit" class="btn btn-primary btn-lg" id="p-submit">أضف المنتج</button>
+          <button type="button" class="btn btn-outline btn-lg" id="p-cancel" hidden>إلغاء</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>📦 منتجاتي</h3>
+      <div class="table-wrap" id="my-products"></div>
+    </div>
+
+    <div class="card">
+      <h3>🧾 الطلبات على منتجاتي</h3>
+      <div class="orders-list" id="vendor-orders"></div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

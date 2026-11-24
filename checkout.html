@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إتمام الشراء | وفّر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+  <header id="site-header"></header>
+
+  <main class="container page">
+    <div class="steps">
+      <span class="done">1. السلة</span><i></i><span class="current">2. بيانات التوصيل والدفع</span><i></i><span>3. تأكيد الطلب</span>
+    </div>
+
+    <form id="checkout-form" class="cart-layout" novalidate>
+      <div class="card">
+        <h3>📍 بيانات التوصيل</h3>
+        <div class="grid-2">
+          <div class="field"><label for="c-name">الاسم</label><input id="c-name" type="text"></div>
+          <div class="field"><label for="c-phone">رقم الموبايل</label><input id="c-phone" type="tel" maxlength="11" inputmode="numeric" placeholder="01xxxxxxxxx" dir="ltr"></div>
+          <div class="field"><label for="c-gov">المحافظة</label><select id="c-gov"></select><small class="muted">التوصيل من منافذ محافظتك بس</small></div>
+          <div class="field"><label for="c-city">المدينة / المنطقة</label><input id="c-city" type="text" placeholder="مثال: مصر الجديدة"></div>
+          <div class="field full"><label for="c-address">العنوان بالتفصيل</label><textarea id="c-address" rows="2" placeholder="الشارع - رقم العمارة - الدور - الشقة"></textarea></div>
+          <div class="field full"><label for="c-notes">ملاحظات (اختياري)</label><input id="c-notes" type="text" placeholder="مثال: اتصل قبل ما توصل"></div>
+        </div>
+
+        <h3>💳 طريقة الدفع</h3>
+        <div class="pay-options">
+          <label class="pay-option active"><input type="radio" name="pay" value="كاش عند الاستلام" checked><span>💵</span><div><b>كاش عند الاستلام</b><small>ادفع للمندوب لما الطلب يوصل</small></div></label>
+          <label class="pay-option"><input type="radio" name="pay" value="فيزا عند الاستلام"><span>💳</span><div><b>فيزا عند الاستلام</b><small>المندوب معاه ماكينة POS</small></div></label>
+          <label class="pay-option"><input type="radio" name="pay" value="محفظة إلكترونية"><span>📱</span><div><b>محفظة إلكترونية</b><small>فودافون كاش / إنستاباي</small></div></label>
+        </div>
+      </div>
+
+      <aside class="card summary">
+        <h3>طلبك</h3>
+        <ul class="co-items" id="co-items"></ul>
+        <div class="sum-row"><span>المجموع</span><b id="co-sub"></b></div>
+        <div class="sum-row save"><span>وفّرت</span><b id="co-save"></b></div>
+        <div class="sum-row"><span>التوصيل</span><b id="co-del"></b></div>
+        <div class="sum-row total"><span>الإجمالي</span><b id="co-total"></b></div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">✔ تأكيد الطلب</button>
+        <a href="cart.html" class="link center">← رجوع للسلة</a>
+      </aside>
+    </form>
+  </main>
+
+  <div class="modal" id="success-modal">
+    <div class="modal-box">
+      <div class="success-icon">✓</div>
+      <h2>تم تأكيد طلبك 🎉</h2>
+      <p>رقم الطلب: <b id="success-id"></b></p>
+      <p>الإجمالي: <b id="success-total"></b></p>
+      <p class="muted">المنفذ هيجهز طلبك وهيتواصل معاك المندوب قبل التوصيل.</p>
+      <div class="modal-btns">
+        <a href="orders.html" class="btn btn-primary">طلباتي</a>
+        <a href="shop.html" class="btn btn-outline">كمّل تسوق</a>
+      </div>
+    </div>
+  </div>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المتجر | وفّر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+  <header id="site-header"></header>
+
+  <section class="shop-banner">
+    <div class="container">
+      <div>
+        <h1 id="shop-hello">أهلاً 👋</h1>
+        <p>منتجات منافذ القوات المسلحة بأسعار المنافذ.. وبتطلب من منافذ <b id="shop-gov"></b> بس</p>
+      </div>
+      <span class="banner-emoji">🧺</span>
+    </div>
+  </section>
+
+  <main class="container shop">
+    <div class="filters">
+      <div class="search-box">
+        <span>🔍</span>
+        <input id="f-search" type="search" placeholder="دوّر على منتج أو منفذ... (طماطم، فراخ، لحمة)">
+      </div>
+      <select id="f-vendor" aria-label="المنفذ"></select>
+      <select id="f-sort" aria-label="الترتيب">
+        <option value="near">الأقرب ليك</option>
+        <option value="deal">أكبر خصم</option>
+        <option value="low">السعر: من الأقل</option>
+        <option value="high">السعر: من الأعلى</option>
+      </select>
+      <label class="check"><input type="checkbox" id="f-mine"> منافذ محافظتي بس</label>
+    </div>
+
+    <!-- ===== ⏰ عروض آخر اليوم ===== -->
+    <section class="clearance in-shop" id="clearance-section" hidden>
+      <div class="clr-head">
+        <div>
+          <span class="clr-pill">⏰ لحق نفسك</span>
+          <h2>عروض آخر اليوم</h2>
+          <p>منتجات متباعتش أو قربت تنتهي صلاحيتها.. عليها <b>خصم إضافي</b> (<span id="clearance-count">0</span> منتج)</p>
+        </div>
+        <div class="clr-timer"><small>العروض بتخلص بعد</small><b id="clearance-timer">00:00:00</b></div>
+      </div>
+      <div class="product-grid" id="clearance-grid"></div>
+    </section>
+
+    <div class="chips" id="cat-chips"></div>
+    <p class="result-count" id="result-count"></p>
+    <div class="product-grid" id="shop-grid"></div>
+  </main>
+
+  <a href="cart.html" class="floating-cart" aria-label="السلة">🛒</a>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>السلة | وفّر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cart">
+  <header id="site-header"></header>
+
+  <main class="container page">
+    <div class="page-title">
+      <h1>🛒 سلة المشتريات</h1>
+      <a href="shop.html" class="link">← كمّل تسوق</a>
+    </div>
+
+    <div class="cart-layout" id="cart-layout">
+      <div class="card">
+        <div class="cart-items" id="cart-items"></div>
+        <button class="btn btn-outline btn-sm" id="clear-cart">فضّي السلة</button>
+      </div>
+
+      <aside class="card summary">
+        <h3>ملخص الطلب</h3>
+        <div class="sum-row"><span>المجموع</span><b id="s-sub"></b></div>
+        <div class="sum-row save"><span>وفّرت</span><b id="s-save"></b></div>
+        <div class="sum-row"><span>التوصيل</span><b id="s-del"></b></div>
+        <div class="sum-row total"><span>الإجمالي</span><b id="s-total"></b></div>
+        <p class="free-note" id="free-note"></p>
+        <a href="checkout.html" class="btn btn-primary btn-block btn-lg">إتمام الشراء (Checkout)</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

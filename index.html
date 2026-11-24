@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وفّر | سوق منافذ مصر</title>
+  <meta name="description" content="وفّر - اشتري خضار وفاكهة ولحوم وفراخ وكل طلبات السوبر ماركت من منافذ القوات المسلحة في مصر">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <!-- ===== البانرات ===== -->
+  <section class="hero">
+    <div class="slider">
+      <div class="slide s1">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+          <span class="pill">🥬 طازة كل يوم</span>
+          <h1>وفّر في كل كيس<br><em>خضار وفاكهة</em> بأسعار المنافذ</h1>
+          <p>خضار وفاكهة طازة من منافذ القوات المسلحة لحد باب بيتك.. في كل محافظات مصر.</p>
+          <div class="hero-btns">
+            <a href="#start" class="btn btn-gold btn-lg">ابدأ دلوقتي</a>
+            <a href="login.html" class="btn btn-ghost btn-lg">عندي حساب</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide s2">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+          <span class="pill">🥩 لحوم وفراخ</span>
+          <h1>لحمة وفراخ<br><em>بخصومات لحد 20%</em></h1>
+          <p>لحوم بلدي وفراخ طازة بجودة مضمونة وأسعار أقل من السوق.</p>
+          <div class="hero-btns">
+            <a href="register.html?role=buyer" class="btn btn-gold btn-lg">سجّل واشتري</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide s3">
+        <div class="slide-bg"></div>
+        <div class="container slide-content">
+          <span class="pill">🏪 للمنافذ</span>
+          <h1>عندك منفذ؟<br><em>اعرض منتجاتك على وفّر</em></h1>
+          <p>سجّل منفذك في دقيقة وابدأ استقبل طلبات من مشترين في محافظتك وكل مصر.</p>
+          <div class="hero-btns">
+            <a href="register.html?role=vendor" class="btn btn-gold btn-lg">سجّل منفذك</a>
+          </div>
+        </div>
+      </div>
+      <button class="slide-arrow prev" id="slide-prev" aria-label="السابق">›</button>
+      <button class="slide-arrow next" id="slide-next" aria-label="التالي">‹</button>
+      <div class="slider-dots" id="slider-dots"></div>
+    </div>
+  </section>
+
+  <!-- ===== شريط العروض ===== -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>🥛 لبن جهينة 1 لتر بـ 46 ج.م</span><span>🍗 فرخة بيضاء بـ 110 ج.م للكيلو</span><span>🥚 بيض الخير 30 بيضة بـ 165 ج.م</span>
+      <span>🚚 توصيل مجاني فوق 500 ج.م</span><span>🫗 زيت كريستال 1 لتر بـ 95 ج.م</span><span>🍝 مكرونة ريجينا بـ 24 ج.م</span>
+      <span>🥛 لبن جهينة 1 لتر بـ 46 ج.م</span><span>🍗 فرخة بيضاء بـ 110 ج.م للكيلو</span><span>🥚 بيض الخير 30 بيضة بـ 165 ج.م</span>
+      <span>🚚 توصيل مجاني فوق 500 ج.م</span><span>🫗 زيت كريستال 1 لتر بـ 95 ج.م</span><span>🍝 مكرونة ريجينا بـ 24 ج.م</span>
+    </div>
+  </div>
+
+  <!-- ===== الأقسام ===== -->
+  <section class="section container">
+    <div class="section-head">
+      <h2>كل اللي محتاجه.. <span>في مكان واحد</span></h2>
+      <p>خضار، فاكهة، لحوم، فراخ، ألبان وبقالة من منافذ موثوقة</p>
+    </div>
+    <div class="cat-grid" id="home-cats"></div>
+  </section>
+
+  <!-- ===== بانرات صغيرة ===== -->
+  <section class="container promo-row">
+    <div class="promo p-green">
+      <div><small>عرض الأسبوع</small><h3>سلة الخضار الكاملة</h3><p>وفّر لحد 25% على كل الخضار</p></div>
+      <span class="promo-emoji">🥕🍅🥒</span>
+    </div>
+    <div class="promo p-red">
+      <div><small>طازة من المنفذ</small><h3>لحوم وفراخ</h3><p>جودة مضمونة وسعر منفذ</p></div>
+      <span class="promo-emoji">🥩🍗</span>
+    </div>
+    <div class="promo p-gold">
+      <div><small>توصيل مجاني</small><h3>فوق 500 ج.م</h3><p>لكل محافظات مصر</p></div>
+      <span class="promo-emoji">🚚</span>
+    </div>
+  </section>
+
+  <!-- ===== عروض اليوم ===== -->
+  <section class="section container">
+    <div class="section-head">
+      <h2>عروض <span>النهاردة</span> 🔥</h2>
+      <p>أكبر خصومات المنافذ.. سجّل دخول كمشتري عشان تضيف للسلة</p>
+    </div>
+    <div class="product-grid" id="home-deals"></div>
+  </section>
+
+  <!-- ===== ⏰ عروض آخر اليوم ===== -->
+  <section class="section container clearance" id="clearance-section" hidden>
+    <div class="clr-head">
+      <div>
+        <span class="clr-pill">⏰ لحق نفسك</span>
+        <h2>عروض آخر اليوم</h2>
+        <p>منتجات متباعتش أو قربت تنتهي صلاحيتها.. عليها <b>خصم إضافي</b> فوق سعر المنفذ (<span id="clearance-count">0</span> منتج)</p>
+      </div>
+      <div class="clr-timer"><small>العروض بتخلص بعد</small><b id="clearance-timer">00:00:00</b></div>
+    </div>
+    <div class="product-grid" id="clearance-grid"></div>
+  </section>
+
+  <!-- ===== اختيار نوع الحساب ===== -->
+  <section class="section role-section" id="start">
+    <div class="container">
+      <div class="section-head light">
+        <h2>إنت مين؟</h2>
+        <p>اختار نوع حسابك وابدأ مع وفّر</p>
+      </div>
+      <div class="role-grid">
+        <a href="register.html?role=vendor" class="role-card">
+          <span class="role-icon">🏪</span>
+          <h3>أنا منفذ (بائع)</h3>
+          <p>سجّل منفذك واعرض منتجاتك وأسعارك واستقبل طلبات المشترين.</p>
+          <ul><li>✔ اعرض منتجات بلا حدود</li><li>✔ تحكم في الأسعار والمخزون</li><li>✔ تابع طلباتك أول بأول</li></ul>
+          <span class="btn btn-primary">سجّل كبائع ←</span>
+        </a>
+        <a href="register.html?role=buyer" class="role-card">
+          <span class="role-icon">🛍️</span>
+          <h3>أنا مشتري</h3>
+          <p>اشتري احتياجات البيت من منافذ القوات المسلحة بأسعار المنافذ.</p>
+          <ul><li>✔ أسعار أقل من السوق</li><li>✔ منافذ في محافظتك</li><li>✔ ادفع كاش عند الاستلام</li></ul>
+          <span class="btn btn-gold">سجّل كمشتري ←</span>
+        </a>
+      </div>
+      <p class="have-account">عندك حساب؟ <a href="login.html">سجّل دخول</a></p>
+    </div>
+  </section>
+
+  <!-- ===== المميزات ===== -->
+  <section class="section container">
+    <div class="features">
+      <div class="feature"><span>🏷️</span><h4>أسعار المنافذ</h4><p>نفس أسعار منافذ القوات المسلحة من غير زحمة</p></div>
+      <div class="feature"><span>🥬</span><h4>طازة ومضمونة</h4><p>منتجات بتتجدد يومياً من المنفذ مباشرة</p></div>
+      <div class="feature"><span>🚚</span><h4>توصيل لـ 27 محافظة</h4><p>في كل محافظة منافذ.. وبنوصلك من منافذ محافظتك</p></div>
+      <div class="feature"><span>💵</span><h4>ادفع عند الاستلام</h4><p>كاش أو فيزا مع المندوب</p></div>
+    </div>
+    <div class="stats">
+      <div><b id="stat-vendors">0</b><span>منفذ مسجل</span></div>
+      <div><b id="stat-products">0</b><span>منتج متاح</span></div>
+      <div><b>27</b><span>محافظة</span></div>
+      <div><b>24/7</b><span>اطلب في أي وقت</span></div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

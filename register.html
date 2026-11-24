@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حساب جديد | وفّر</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+  <header id="site-header"></header>
+
+  <main class="auth-page">
+    <div class="auth-side">
+      <h2>وفّر وقتك وفلوسك 💚</h2>
+      <p>أكبر سوق إلكتروني لمنافذ القوات المسلحة في مصر.</p>
+      <div class="auth-emojis">🍅🥒🍌🍎🥩🍗🥚🧀</div>
+    </div>
+
+    <div class="auth-card wide">
+      <div class="role-tabs">
+        <button type="button" class="role-tab" data-role="buyer">🛍️ مشتري</button>
+        <button type="button" class="role-tab" data-role="vendor">🏪 بائع (منفذ)</button>
+      </div>
+      <h1 id="reg-title">اعمل حساب</h1>
+      <p class="muted" id="reg-sub"></p>
+
+      <form id="register-form" novalidate>
+        <div class="grid-2">
+          <div class="field">
+            <label for="r-name">الاسم بالكامل</label>
+            <input id="r-name" type="text" placeholder="مثال: أحمد محمد علي" autocomplete="name">
+          </div>
+          <div class="field" data-only="vendor">
+            <label for="r-store">اسم المنفذ</label>
+            <input id="r-store" type="text" placeholder="مثال: منفذ مدينة نصر">
+          </div>
+          <div class="field" data-only="vendor">
+            <label for="r-phone">رقم الموبايل</label>
+            <input id="r-phone" type="tel" inputmode="numeric" maxlength="11" placeholder="01xxxxxxxxx" dir="ltr">
+          </div>
+          <div class="field">
+            <label for="r-email">الإيميل</label>
+            <input id="r-email" type="email" placeholder="name@example.com" dir="ltr" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="r-pass">الباسورد</label>
+            <div class="pass-wrap">
+              <input id="r-pass" type="password" placeholder="6 حروف أو أرقام على الأقل" dir="ltr" autocomplete="new-password">
+              <button type="button" class="toggle-pass" aria-label="إظهار الباسورد">👁</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="r-pass2">تأكيد الباسورد</label>
+            <div class="pass-wrap">
+              <input id="r-pass2" type="password" placeholder="اكتب الباسورد تاني" dir="ltr" autocomplete="new-password">
+              <button type="button" class="toggle-pass" aria-label="إظهار الباسورد">👁</button>
+            </div>
+          </div>
+          <div class="field" data-only="vendor">
+            <label for="r-nid">الرقم القومي</label>
+            <input id="r-nid" type="text" inputmode="numeric" maxlength="14" placeholder="14 رقم" dir="ltr">
+          </div>
+          <div class="field">
+            <label for="r-gov" id="gov-label">المحافظة</label>
+            <select id="r-gov"></select>
+          </div>
+          <div class="field full" data-only="vendor">
+            <label for="r-address">مكان المنفذ (العنوان بالتفصيل)</label>
+            <textarea id="r-address" rows="2" placeholder="الشارع - المنطقة - علامة مميزة"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">إنشاء الحساب</button>
+        <p class="switch">عندك حساب؟ <a href="login.html">سجّل دخول</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
